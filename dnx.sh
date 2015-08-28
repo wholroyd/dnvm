@@ -10,6 +10,3 @@ then
 fi
 
 source /usr/local/bin/dnx/dnvm/dnvm.sh
-
-
-## alias dnvm="/usr/local/bin/dnx/dnvm/dnvm.sh"
