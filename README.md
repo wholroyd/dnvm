@@ -1,2 +1,2 @@
 # dnvm
-Creates an RPM for DNVM. Support for DEB coming soon.
+Creates an .rpm and .deb package for DNVM.
