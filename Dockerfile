@@ -2,12 +2,8 @@ FROM wholroyd/centos:latest
 
 MAINTAINER William Holroyd <wholroyd@gmail.com>
 
-ENV DNX_USER_HOME /usr/local/bin/dnx
-ENV DNX_HOME /usr/local/bin/dnx
-
 RUN yum install -y curl ruby-devel gcc libffi-devel make rpm-build
 RUN gem install fpm
-
 RUN mkdir -p /usr/local/bin/dnx/dnvm && \
     mkdir -p /usr/local/bin/dnx/runtimes
 
