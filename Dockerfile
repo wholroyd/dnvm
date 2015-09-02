@@ -4,10 +4,10 @@ MAINTAINER William Holroyd <wholroyd@gmail.com>
 
 RUN yum install -y curl ruby-devel gcc libffi-devel make rpm-build
 RUN gem install fpm
-RUN mkdir -p /usr/local/bin/dnx/dnvm && \
-    mkdir -p /usr/local/bin/dnx/runtimes
+RUN mkdir -p /usr/bin/dnx/dnvm && \
+    mkdir -p /usr/bin/dnx/runtimes
 
-COPY dnvm.sh /usr/local/bin/dnx/dnvm/
+COPY dnvm.sh /usr/bin/dnx/dnvm/
 COPY dnx.sh /etc/profile.d/
 
 RUN fpm -s dir \
@@ -20,7 +20,7 @@ RUN fpm -s dir \
     --license "Apache License, Version 2.0" \
     --description "Provides tooling to manage DNX runtime verisons" \
     --url "https://github.com/aspnet/Home" \
-    /usr/local/bin/dnx \
+    /usr/bin/dnx \
     /etc/profile.d/dnx.sh
 
 RUN fpm -s dir \
@@ -33,7 +33,7 @@ RUN fpm -s dir \
     --license "Apache License, Version 2.0" \
     --description "Provides tooling to manage DNX runtime verisons" \
     --url "https://github.com/aspnet/Home" \
-    /usr/local/bin/dnx \
+    /usr/bin/dnx \
     /etc/profile.d/dnx.sh
 
 ## Just need to use something to post a release to GitHub here, 
